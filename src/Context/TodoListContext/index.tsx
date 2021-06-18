@@ -21,7 +21,7 @@ const TodoListContextProvider = ({children}: Props) => {
   };
 
   const removeTodoList = (index: number): void => {
-    let list = [...todoList];
+    const list = [...todoList];
     list.splice(index, 1);
     setTodoList(list);
     AsyncStorage.setItem('todoList', JSON.stringify(list));
